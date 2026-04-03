@@ -16,6 +16,8 @@ A backend API for a Finance Dashboard system with role-based access control, bui
 ---
 
 ## Project Structure
+
+<pre>
 zorvyn-backend/
 ├── app/
 │   ├── core/
@@ -37,7 +39,7 @@ zorvyn-backend/
 ├── seed.py                  # Demo data seed script
 ├── requirements.txt
 └── README.md
----
+</pre>
 
 ## Setup Instructions
 
