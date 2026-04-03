@@ -2,6 +2,10 @@
 
 A backend API for a Finance Dashboard system with role-based access control, built with FastAPI, SQLAlchemy, and SQLite.
 
+**Live API:** https://zorvyn-backend-tyz7.onrender.com
+
+**API Documentation:** https://zorvyn-backend-tyz7.onrender.com/docs
+
 ---
 
 ## Tech Stack
