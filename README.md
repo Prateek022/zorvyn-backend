@@ -131,7 +131,7 @@ http://127.0.0.1:8000/docs
 | Action                        | Viewer | Analyst | Admin |
 |-------------------------------|--------|---------|-------|
 | View dashboard                | ✅     | ✅      | ✅    |
-| View records                  | ✅     | ✅      | ✅    |
+| View records                  | ❌     | ✅      | ✅    |
 | Create records                | ❌     | ❌      | ✅    |
 | Update records                | ❌     | ❌      | ✅    |
 | Delete records                | ❌     | ❌      | ✅    |

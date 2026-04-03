@@ -6,7 +6,7 @@ from datetime import datetime
 from app.database import get_db
 from app.models.record import FinancialRecord
 from app.schemas.record import RecordCreate, RecordUpdate, RecordResponse
-from app.core.dependencies import get_current_user, require_admin
+from app.core.dependencies import get_current_user, require_admin, require_analyst_or_admin
 from app.models.user import User
 
 router = APIRouter(prefix="/records", tags=["Financial Records"])
@@ -35,7 +35,7 @@ def get_records(
     skip: int = Query(0, ge=0),
     limit: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(require_analyst_or_admin)
 ):
     query = db.query(FinancialRecord).filter(FinancialRecord.is_deleted == 0)
 
@@ -63,7 +63,7 @@ def get_records(
 def get_record(
     record_id: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(require_analyst_or_admin)
 ):
     record = db.query(FinancialRecord).filter(
         FinancialRecord.id == record_id,

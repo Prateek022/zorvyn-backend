@@ -53,3 +53,12 @@ def require_analyst_or_admin(current_user: User = Depends(get_current_user)) -> 
             detail="Analyst or Admin access required"
         )
     return current_user
+
+
+def require_any_role(current_user: User = Depends(get_current_user)) -> User:
+    if current_user.role not in ["admin", "analyst", "viewer"]:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Authentication required"
+        )
+    return current_user
