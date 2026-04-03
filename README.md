@@ -43,7 +43,7 @@ zorvyn-backend/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/zorvyn-backend.git
+git clone https://github.com/Prateek022/zorvyn-backend.git
 cd zorvyn-backend
 ```
 
